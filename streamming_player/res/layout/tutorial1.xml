@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" 
+			android:id="@+id/home_container"  
+			android:layout_width="fill_parent" 
+			android:layout_height="fill_parent">
+
+	<com.google.android.maps.MapView
+			android:id="@+id/city_map_view" 
+    	    android:layout_width="fill_parent"
+        	android:layout_height="fill_parent" 
+			android:enabled="true" 
+			android:clickable="true"             
+			android:apiKey="0DUEIIn35xtmfWC2DXprK5kqNF-aEaNgRJ4ONxw"/>
+
+
+
+		<com.pocketjourney.view.TransparentPanel
+				android:id="@+id/transparent_panel" 
+	    	    android:layout_width="40dp"
+	        	android:layout_height="40dp"
+	        	android:paddingTop="5px"
+	        	android:paddingLeft="5px"
+				android:paddingBottom="5px"
+				android:paddingRight="5px"
+        android:gravity="bottom">
+		
+		    <Button android:id="@+id/button_click_me"
+	        android:layout_width="wrap_content" 
+	        android:layout_height="wrap_content"
+	        android:text="Click Me!"/>
+	        
+		</com.pocketjourney.view.TransparentPanel>
+
+
+</FrameLayout>
