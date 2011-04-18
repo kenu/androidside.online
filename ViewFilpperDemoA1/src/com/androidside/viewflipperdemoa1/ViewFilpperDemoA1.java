@@ -21,7 +21,7 @@ public class ViewFilpperDemoA1 extends Activity implements View.OnClickListener 
         next = (Button) findViewById(R.id.next);
         
         prev.setOnClickListener(this);
-        next.setOnClickListener(this);
+        next.setOnClickListener(this);        
     }
 
     @Override
