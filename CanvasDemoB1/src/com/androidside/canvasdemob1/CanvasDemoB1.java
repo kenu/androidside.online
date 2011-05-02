@@ -13,7 +13,6 @@ public class CanvasDemoB1 extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(new MyView(this));
-
     }
 
     private static class MyView extends View {
