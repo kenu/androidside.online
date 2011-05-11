@@ -21,6 +21,6 @@ public class WebViewDemoA1 extends Activity {
       webView.getSettings().setSavePassword(true);
       webView.getSettings().setSaveFormData(true);
 
-      webView.loadUrl("http://www.androidside.com/");
+      webView.loadUrl("http://m.androidside.com/");
     }
 }
