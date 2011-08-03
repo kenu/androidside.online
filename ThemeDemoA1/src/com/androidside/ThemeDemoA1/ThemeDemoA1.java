@@ -6,8 +6,8 @@ import android.os.Bundle;
 public class ThemeDemoA1 extends Activity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
+        setTheme(R.style.Theme_big);
         super.onCreate(savedInstanceState);
-        //setTheme(R.style.Theme_big);
         setContentView(R.layout.main);
     }
 }
