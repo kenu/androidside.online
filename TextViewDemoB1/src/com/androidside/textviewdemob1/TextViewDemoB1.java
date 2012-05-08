@@ -13,7 +13,7 @@ public class TextViewDemoB1 extends Activity {
         setContentView(R.layout.main);
         
         for (int i = 1; i < 4; i++) {
-            int resID = getResources().getIdentifier("com.androidside:id/textview"+i, null, null);
+            int resID = getResources().getIdentifier("com.androidside.textviewdemob1:id/textview"+i, null, null);
             ((TextView) findViewById(resID)).setText("test"+i);
         }
         
