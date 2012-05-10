@@ -15,17 +15,17 @@
         android:layout_height="wrap_content"
         android:layout_toRightOf="@id/label" />
     <Button
-        android:id="@+id/ok"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/edit"        
-        android:layout_toLeftOf="@+id/cancel"
-        android:text="OK" />
-    <Button
         android:id="@+id/cancel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"        
         android:layout_below="@id/edit"
         android:layout_alignParentRight="true"
         android:text="Cancel" />
+    <Button
+        android:id="@+id/ok"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/edit"        
+        android:layout_toLeftOf="@id/cancel"
+        android:text="OK" />
 </RelativeLayout>
