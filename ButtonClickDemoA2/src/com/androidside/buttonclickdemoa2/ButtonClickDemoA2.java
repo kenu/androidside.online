@@ -23,7 +23,6 @@ public class ButtonClickDemoA2 extends Activity implements View.OnClickListener 
         button.setOnClickListener(this);
     }
 
-    @Override
     public void onClick(View v) { 
         text.setText(edit.getText());
         

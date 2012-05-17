@@ -24,7 +24,6 @@ public class ViewFilpperDemoA1 extends Activity implements View.OnClickListener 
         next.setOnClickListener(this);        
     }
 
-    @Override
     public void onClick(View v) {
         //prev 버튼이 클릭되었을 때
         if (v == prev) {

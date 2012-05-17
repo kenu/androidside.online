@@ -14,12 +14,11 @@ public class TouchEventDemoA1 extends Activity {
         
         MyView myView = new MyView(this);
         myView.setOnTouchListener(new View.OnTouchListener() {            
-            @Override
             public boolean onTouch(View v, MotionEvent event) {
                 if (event.getAction() == MotionEvent.ACTION_DOWN) {
                     Log.d("tag", "OnTouchListener.onTouch");
                     
-                    return false;
+                    return true;
                 }
                 return true;
             }
