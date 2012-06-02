@@ -44,7 +44,6 @@ public class IntentDemoD1 extends Activity implements View.OnClickListener{
         findViewById(R.id.image2).setOnClickListener(this);        
     }
 
-    @Override
     public void onClick(View v) {
         switch(v.getId()) {
         case R.id.call: 

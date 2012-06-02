@@ -30,8 +30,9 @@ public class MapDemoA2 extends MapActivity {
         mapView = (MapView) findViewById(R.id.map);
 
         // 신림역의 위도와 경도를 지오포인트(GeoPoint)에 설정한다.
-        GeoPoint gp = new GeoPoint((int) (37.484203 * 1000000.0),
-                (int) (126.929699 * 1000000.0));
+//        GeoPoint gp = new GeoPoint((int) (37.484203 * 1000000.0),
+//                (int) (126.929699 * 1000000.0));
+        GeoPoint gp = new GeoPoint(37484203,126929699);
 
         //지정된 gp를 화면 중앙에 오게 위치시킨다.
         mapView.getController().setCenter(gp);
@@ -71,7 +72,7 @@ public class MapDemoA2 extends MapActivity {
         return (super.onKeyDown(keyCode, event));
     }
 
-    // 맵에 아이콘을 표시한다.
+	// 맵에 아이콘을 표시한다.
     public void setIcon() {
         final GeoPoint gp = new GeoPoint(
                 mapView.getMapCenter().getLatitudeE6(), mapView.getMapCenter()
@@ -85,7 +86,6 @@ public class MapDemoA2 extends MapActivity {
         iv.setImageResource(R.drawable.pin);
         iv.setOnClickListener(new View.OnClickListener() {
 
-            @Override
             public void onClick(View v) {
                 Toast.makeText(
                         v.getContext(),

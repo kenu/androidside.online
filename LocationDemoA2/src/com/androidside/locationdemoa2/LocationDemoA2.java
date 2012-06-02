@@ -34,7 +34,6 @@ public class LocationDemoA2 extends Activity implements View.OnClickListener {
         stopButton.setOnClickListener(this);
     }
     
-    @Override
     public void onClick(View v) {
         int millis = 5000; //밀리세컨드
         int distance = 5; //거리
@@ -53,7 +52,6 @@ public class LocationDemoA2 extends Activity implements View.OnClickListener {
     public class MyLocationListener implements LocationListener {
         
         //위치 정보가 변경되었을 때 호출된다.
-        @Override
         public void onLocationChanged(Location loc) {
             String text = "현재 위치 : \n" + "위도 : " + loc.getLatitude() + "\n"
                     + "경도 : " + loc.getLongitude();
@@ -63,21 +61,18 @@ public class LocationDemoA2 extends Activity implements View.OnClickListener {
         }
 
         //위치 제공자가 변경되었을 때 호출된다.
-        @Override
         public void onProviderDisabled(String provider) {
             Toast.makeText(getApplicationContext(), "GPS 이용 불가",
                     Toast.LENGTH_SHORT).show();
         }
 
         //위치 제공자가 활성화되었을 때 호출된다.
-        @Override
         public void onProviderEnabled(String provider) {
             Toast.makeText(getApplicationContext(), "GPS 이용 가능",
                     Toast.LENGTH_SHORT).show();
         }
 
         //위치 제공자의 상태가 변경되었을 때 호출된다.
-        @Override
         public void onStatusChanged(String provider, int status, Bundle extras) {
 
         }

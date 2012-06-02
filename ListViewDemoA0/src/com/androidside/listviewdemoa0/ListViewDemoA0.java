@@ -23,12 +23,11 @@ public class ListViewDemoA0 extends Activity implements AdapterView.OnItemClickL
         ListView list = (ListView) findViewById(R.id.list);
         
         list.setAdapter(new ArrayAdapter<String>(this,
-                android.R.layout.simple_list_item_1, cars));
+                android.R.layout.simple_list_item_single_choice, cars));
 
         list.setOnItemClickListener(this);        
     }
 
-    @Override
     public void onItemClick(AdapterView<?> parent, View v, int position, long id) {
         selected.setText(cars[position]);
     }

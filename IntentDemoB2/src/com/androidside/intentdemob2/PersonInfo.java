@@ -17,12 +17,10 @@ public class PersonInfo implements Parcelable {
         this.age = data[1];
     }
     
-    @Override
     public int describeContents() {
         // TODO Auto-generated method stub
         return 0;
     }
-    @Override
     public void writeToParcel(Parcel dest, int flags) {
         // TODO Auto-generated method stub
         dest.writeStringArray(new String[]{this.name, this.age});

@@ -18,7 +18,6 @@ public class LocationDemoA3 extends Activity implements View.OnClickListener {
         button.setOnClickListener(this);
     }
 
-    @Override
     public void onClick(View v) {
         checkGps();
     }
