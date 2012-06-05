@@ -31,7 +31,7 @@ public class XMLPullParserDemoA1 extends Activity {
     }
     
     public ArrayList<String> getXmlData() {
-        String rss = "http://www.androidside.com/book/data.xml";
+        String rss = "http://zziing.tistory.com/rss";
         
         ArrayList<String> titleList = new ArrayList<String>();
 
@@ -42,7 +42,7 @@ public class XMLPullParserDemoA1 extends Activity {
 
             URL url = new URL(rss);
             InputStream is = url.openStream();
-            xpp.setInput(is, "euc-kr");
+            xpp.setInput(is, "utf-8");
 
             int eventType = xpp.getEventType();
             

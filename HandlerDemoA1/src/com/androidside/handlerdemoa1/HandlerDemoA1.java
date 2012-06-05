@@ -20,7 +20,6 @@ public class HandlerDemoA1 extends Activity {
         
         Button button = (Button) findViewById(R.id.button);
         button.setOnClickListener(new View.OnClickListener() {
-            @Override
             public void onClick(View arg0) {                
                 doit();
             }
@@ -28,7 +27,6 @@ public class HandlerDemoA1 extends Activity {
 
         Button button2 = (Button) findViewById(R.id.button2);
         button2.setOnClickListener(new View.OnClickListener() {
-            @Override
             public void onClick(View v) {
                 Toast.makeText(HandlerDemoA1.this, "테스트 버튼이 클릭되었습니다.",
                         Toast.LENGTH_SHORT).show();
@@ -37,18 +35,18 @@ public class HandlerDemoA1 extends Activity {
         });
     }
 
-    private void doit() {
-        //0.1초씩 대기하면서 100번 카운트(총 10초 동안 실행됨)
-        for (int i = 1; i <= 100; i++) {
-            try {
-                text.setText(""+i);
-                Thread.sleep(100);
-            } catch (InterruptedException e) {
-            }
-        }
-    }
+//    private void doit() {
+//        //0.1초씩 대기하면서 100번 카운트(총 10초 동안 실행됨)
+//        for (int i = 1; i <= 100; i++) {
+//            try {
+//                text.setText(""+i);
+//                Thread.sleep(100);
+//            } catch (InterruptedException e) {
+//            }
+//        }
+//    }
 
-/*private void doit() {
+private void doit() {
     //0.1초씩 대기하면서 100번 카운트(총 10초 동안 실행됨)
     new Thread() { 
         @Override
@@ -62,7 +60,7 @@ public class HandlerDemoA1 extends Activity {
             }
         }
     }.start();        
-}*/
+}
 
 /*private void doit() {
     //0.1초씩 대기하면서 100번 카운트(총 10초 동안 실행됨)

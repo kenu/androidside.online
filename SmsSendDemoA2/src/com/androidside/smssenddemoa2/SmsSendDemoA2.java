@@ -67,7 +67,6 @@ public class SmsSendDemoA2 extends Activity implements View.OnClickListener {
         }, new IntentFilter(DELIVERY_INTENT));
     }
 
-    @Override
     public void onClick(View v) {
         SmsManager sms = SmsManager.getDefault();
         sms.sendTextMessage(receiver.getText().toString(), null, message.getText().toString(), sentIntent , deliveryIntent );

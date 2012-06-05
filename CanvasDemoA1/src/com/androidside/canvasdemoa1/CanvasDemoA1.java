@@ -26,11 +26,11 @@ public class CanvasDemoA1 extends Activity {
             super.onDraw(canvas);
 
             Paint paint = new Paint(Paint.ANTI_ALIAS_FLAG);
-            paint.setColor(Color.WHITE);
+            paint.setColor(Color.RED);
             
             //사각형 채우기
             paint.setStyle(Paint.Style.FILL);            
-            canvas.drawRect(10, 10, 10+100, 10+100, paint);
+            canvas.drawRect(20, 10, 10+100, 10+100, paint);
             
             //사각형 테두리 그리기
             paint.setStyle(Paint.Style.STROKE);

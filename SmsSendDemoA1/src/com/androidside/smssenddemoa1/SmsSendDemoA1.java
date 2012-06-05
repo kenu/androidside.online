@@ -23,7 +23,6 @@ public class SmsSendDemoA1 extends Activity {
         
         button.setOnClickListener(new View.OnClickListener() {
             
-            @Override
             public void onClick(View v) {
                 SmsManager sms = SmsManager.getDefault();
                 sms.sendTextMessage(receiver.getText().toString(), null, message.getText().toString(), null, null);  

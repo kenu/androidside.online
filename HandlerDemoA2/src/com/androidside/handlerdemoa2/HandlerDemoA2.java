@@ -22,7 +22,6 @@ public class HandlerDemoA2 extends Activity {
 
         Button button = (Button) findViewById(R.id.button);
         button.setOnClickListener(new View.OnClickListener() {
-            @Override
             public void onClick(View arg0) {
                 doit();
             }
@@ -30,7 +29,6 @@ public class HandlerDemoA2 extends Activity {
 
         Button button2 = (Button) findViewById(R.id.button2);
         button2.setOnClickListener(new View.OnClickListener() {
-            @Override
             public void onClick(View v) {
                 Toast.makeText(HandlerDemoA2.this, "테스트 버튼이 클릭되었습니다.",
                         Toast.LENGTH_SHORT).show();

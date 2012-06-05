@@ -48,7 +48,7 @@ public class MapDemoD1 extends MapActivity implements View.OnClickListener {
         stopButton.setOnClickListener(this);
     }
 
-    @Override
+    
     public void onClick(View v) {
         int millis = 5000; // 밀리세컨드
         int distance = 5; // 거리(미터)
@@ -64,7 +64,6 @@ public class MapDemoD1 extends MapActivity implements View.OnClickListener {
     }
 
     public class MyLocationListener implements LocationListener {
-        @Override
         // 위치가 변경되었을 때 호출
         public void onLocationChanged(Location loc) {
             GeoPoint gp = new GeoPoint((int) (loc.getLatitude() * 1E6),
@@ -76,21 +75,19 @@ public class MapDemoD1 extends MapActivity implements View.OnClickListener {
                     Toast.LENGTH_SHORT).show();
         }
 
-        @Override
         // 위치 제공자가 비활성화되었을 때 호출
         public void onProviderDisabled(String provider) {
             Toast.makeText(getApplicationContext(), "GPS 이용 불가",
                     Toast.LENGTH_SHORT).show();
         }
 
-        @Override
         // 위치 제공자가 활성화되었을 때 호출
         public void onProviderEnabled(String provider) {
             Toast.makeText(getApplicationContext(), "GPS 이용 가능",
                     Toast.LENGTH_SHORT).show();
         }
 
-        @Override
+        
         // 상태가 변경되었을 때 호출
         public void onStatusChanged(String provider, int status, Bundle extras) {
 

@@ -15,7 +15,6 @@ public class ServiceDemoA1 extends Activity {
 
         Button play = (Button)findViewById(R.id.play);
         play.setOnClickListener(new OnClickListener() {
-            @Override
             public void onClick(View v) {
                 startService(new Intent("com.androidside.service.MY_MP3"));
             }
@@ -24,7 +23,6 @@ public class ServiceDemoA1 extends Activity {
         
         Button stop = (Button)findViewById(R.id.stop);
         stop.setOnClickListener(new OnClickListener() {
-            @Override
             public void onClick(View v) {
                 stopService(new Intent("com.androidside.service.MY_MP3"));
             }

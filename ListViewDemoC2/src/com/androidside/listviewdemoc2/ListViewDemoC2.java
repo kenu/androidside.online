@@ -12,48 +12,50 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 public class ListViewDemoC2 extends ListActivity {
-    String[] cars = {"SM3", "SM5", "SM7", "SONATA", "AVANTE", "SOUL", "K5", "K7"};
-    TextView selected;
+	String[] cars = { "SM3", "SM5", "SM7", "SONATA", "AVANTE", "SOUL", "K5",
+			"K7" };
+	int[] carImgs = { R.drawable.sm3, R.drawable.icon, R.drawable.sonata,
+			R.drawable.sonata, R.drawable.sonata, R.drawable.icon,
+			R.drawable.sonata, R.drawable.icon };
+	TextView selected;
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        // TODO Auto-generated method stub
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.main);
-        
-        selected = (TextView) findViewById(R.id.selected);
-        
-        setListAdapter(new NewArrayAdapter(this));        
-    }
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		// TODO Auto-generated method stub
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.main);
 
-    public void onListItemClick(ListView parent, View v, int position, long id) {
-        selected.setText(cars[position]);
-    }
+		selected = (TextView) findViewById(R.id.selected);
 
-    class NewArrayAdapter extends ArrayAdapter {
-        Activity context;
+		setListAdapter(new NewArrayAdapter(this));
+	}
 
-        @SuppressWarnings("unchecked")
-        NewArrayAdapter(Activity context) {
-            super(context, R.layout.list_row, cars);
+	public void onListItemClick(ListView parent, View v, int position, long id) {
+		selected.setText(cars[position]);
+	}
 
-            this.context = context;
-        }
+	class NewArrayAdapter extends ArrayAdapter {
+		Activity context;
 
-        public View getView(int position, View convertView, ViewGroup parent) {
-            LayoutInflater inflater = context.getLayoutInflater();
+		@SuppressWarnings("unchecked")
+		NewArrayAdapter(Activity context) {
+			super(context, R.layout.list_row, cars);
 
-            View row = inflater.inflate(R.layout.list_row, null);
+			this.context = context;
+		}
 
-            TextView textView = (TextView) row.findViewById(R.id.label);
-            textView.setText(cars[position]);
+		public View getView(int position, View convertView, ViewGroup parent) {
+			LayoutInflater inflater = context.getLayoutInflater();
 
-            if (cars[position].equals("SONATA")) {
-                ImageView imageView = (ImageView) row.findViewById(R.id.icon);
-                imageView.setImageResource(R.drawable.sonata);
-            }
+			View row = inflater.inflate(R.layout.list_row, null);
 
-            return row;
-        }
-    }
+			TextView textView = (TextView) row.findViewById(R.id.label);
+			textView.setText(cars[position]);
+
+			ImageView imageView = (ImageView) row.findViewById(R.id.icon);
+			imageView.setImageResource(carImgs[position]);
+
+			return row;
+		}
+	}
 }

@@ -30,7 +30,6 @@ public class MapDemoC1 extends MapActivity {
         
         Button button = (Button) findViewById(R.id.button);
         button.setOnClickListener(new View.OnClickListener() {            
-            @Override
             public void onClick(View v) {
                 goLoc(edit.getText().toString());
             }

@@ -12,7 +12,6 @@ public class RemoteService extends Service {
     private MediaPlayer player;
     
     public class RemoteServiceImpl extends IRemoteService.Stub {
-        @Override
         public String getPosition() throws RemoteException {
             if (player != null && player.isPlaying()) {
                 return player.getCurrentPosition()/1000 + "√ /" + player.getDuration()/1000 + "√ ";
@@ -21,7 +20,6 @@ public class RemoteService extends Service {
             }
         }
 
-        @Override
         public void play() throws RemoteException {
             if (player != null && !player.isPlaying()) {
                 player.start();

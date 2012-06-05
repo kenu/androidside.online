@@ -18,7 +18,7 @@ public class IntentDemoA1 extends Activity{
         Button callButton = (Button) findViewById(R.id.call);
         
         callButton.setOnClickListener(new View.OnClickListener() {            
-            @Override
+           
             public void onClick(View arg0) {
                 String number = numberEdit.getText().toString();
                 

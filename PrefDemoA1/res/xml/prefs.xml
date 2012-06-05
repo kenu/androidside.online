@@ -8,4 +8,10 @@
         android:summary="장치 이름을 설정하세요."
         android:dialogTitle="장치이름"
     />
+    <EditTextPreference
+        android:key="device2"
+        android:title="장치이름2"
+        android:summary="장치 이름2을 설정하세요."
+        android:dialogTitle="장치이름2"
+    />
 </PreferenceScreen>

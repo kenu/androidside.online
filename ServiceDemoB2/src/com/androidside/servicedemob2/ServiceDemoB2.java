@@ -26,7 +26,6 @@ public class ServiceDemoB2 extends Activity {
 
         Button play = (Button)findViewById(R.id.play);
         play.setOnClickListener(new OnClickListener() {
-            @Override
             public void onClick(View v) {
                 bindService(new Intent(IRemoteService.class.getName()), serviceConn, Context.BIND_AUTO_CREATE);
             }
@@ -35,7 +34,6 @@ public class ServiceDemoB2 extends Activity {
         
         Button stop = (Button)findViewById(R.id.stop);
         stop.setOnClickListener(new OnClickListener() {
-            @Override
             public void onClick(View v) {
                 if (remoteService != null) {
                     unbindService(serviceConn);
@@ -45,7 +43,6 @@ public class ServiceDemoB2 extends Activity {
 
         Button position = (Button)findViewById(R.id.position);
         position.setOnClickListener(new OnClickListener() {
-            @Override
             public void onClick(View v) {
                 if (remoteService != null) {
                     showPosition();
@@ -65,7 +62,6 @@ public class ServiceDemoB2 extends Activity {
     }
     
     private ServiceConnection serviceConn = new ServiceConnection() {
-        @Override
         public void onServiceConnected(ComponentName name, IBinder service) {
             Log.d("tag", "onServiceConnected");
             remoteService = IRemoteService.Stub.asInterface(service);
@@ -76,7 +72,6 @@ public class ServiceDemoB2 extends Activity {
             }
         }
 
-        @Override
         public void onServiceDisconnected(ComponentName name) {
             remoteService = null;            
         }
